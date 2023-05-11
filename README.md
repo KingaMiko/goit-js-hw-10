@@ -262,7 +262,7 @@ How it works
 ### Live page
 
 After some time, usually a couple of minutes, the live page can be viewed at the address specified in the edited `homepage` property. For example, here is a link to a live version for this repository
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
+https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
 
 If a blank page opens, make sure there are no errors in the `Console` tab related to incorrect paths to the CSS and JS files of the project (**404**). Most likely you have the wrong value for the `homepage` property or the `build` script in the `package.json` file.
 
