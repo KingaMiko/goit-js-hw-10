@@ -238,7 +238,8 @@ own, and submit the changes to GitHub.
 "homepage": "https://your_username.github.io/your_repo_name/",
 "scripts": {
   "build": "parcel build src/*.html --public-url /your_repo_name/"
-},
+},</br>
+
 Next, you need to go to the settings of the GitHub repository (Settings > Pages) and set the distribution of the production version of files from the /root folder of the gh-pages branch, if this was not done automatically.
 
 Next, you need to go to the settings of the GitHub repository (`Settings` > `Pages`) and set the distribution of the production version of files from the `/root` folder of the `gh-pages` branch, if this was not done automatically.
