@@ -35,7 +35,14 @@ const inputHandler = e => {
         );
         return;
       }
-      renderMarkup(data);
+      if (name.toLowerCase() === 'sudan') {
+        const sudanData = data.filter(country =>
+          country.name.official.toLowerCase().includes('republic of the sudan')
+        );
+        renderMarkup(sudanData);
+      } else {
+        renderMarkup(data);
+      }
     })
     .catch(err => {
       cleanMarkup(countryList);
