@@ -82,8 +82,8 @@ const createListMarkup = data => {
     const img = document.createElement('img');
     img.src = flags.svg;
     img.alt = name.official;
-    img.width = 60;
-    img.height = 40;
+    img.width = 30;
+    img.height = 20;
     img.classList.add('clickable-flag');
     img.addEventListener('click', () => {
       showCountryInfo(name.official);
