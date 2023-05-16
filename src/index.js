@@ -84,6 +84,10 @@ const createListMarkup = data => {
     img.alt = name.official;
     img.width = 60;
     img.height = 40;
+    img.classList.add('clickable-flag');
+    img.addEventListener('click', () => {
+      showCountryInfo(name.official);
+    });
     listItem.appendChild(img);
     listItem.appendChild(document.createTextNode(name.official));
 
@@ -101,7 +105,7 @@ const createInfoMarkup = data => {
     const img = document.createElement('img');
     img.src = flags.svg;
     img.alt = name.official;
-    img.width = 40;
+    img.width = 60;
     img.height = 40;
     h2.appendChild(img);
     h2.innerHTML += `${name.official}`;
@@ -123,4 +127,26 @@ const createInfoMarkup = data => {
   return container;
 };
 
+const showCountryInfo = officialName => {
+  fetchCountries(officialName)
+    .then(data => {
+      if (data.length === 1) {
+        renderMarkup(data);
+      }
+    })
+    .catch(err => {
+      cleanMarkup(countryInfo);
+      Notify.failure('Oops, failed to fetch country information');
+    });
+};
+
 searchBox.addEventListener('input', debounce(inputHandler, DEBOUNCE_DELAY));
+const resetButton = document.querySelector('[data-reset]');
+
+const resetSearch = () => {
+  cleanMarkup(countryList);
+  cleanMarkup(countryInfo);
+  searchBox.value = '';
+};
+
+resetButton.addEventListener('click', resetSearch);

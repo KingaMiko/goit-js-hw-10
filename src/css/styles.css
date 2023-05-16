@@ -18,7 +18,7 @@ body {
   font-weight: 500;
   padding: 10px;
   max-width: 320px;
-  margin-bottom: 24px;
+
   margin-left: 20px;
   border: none;
   border-radius: 7px;
@@ -63,4 +63,28 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin: 0px;
+}
+
+button {
+  margin-left: 20px;
+  height: 40px;
+  width: 100px;
+}
+
+.input-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.clickable-flag {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.clickable-flag:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
