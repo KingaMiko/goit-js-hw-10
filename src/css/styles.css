@@ -7,14 +7,60 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #decad8;
   color: #212121;
   line-height: 1.5;
 }
 
 #search-box {
   font: inherit;
-  padding: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px;
   max-width: 320px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  margin-left: 20px;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 5px 10px 5px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+#search-box:focus {
+  outline: none;
+}
+
+.country-list {
+  list-style-type: decimal;
+  line-height: 3em;
+}
+
+.country-list li {
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.country-list img {
+  margin-right: 10px;
+}
+
+.country-info {
+  margin-left: 30px;
+}
+
+.country-info img {
+  margin-right: 12px;
+}
+
+.country-info h2 {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.country-info p {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0px;
 }
