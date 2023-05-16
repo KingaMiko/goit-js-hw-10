@@ -31,7 +31,7 @@ body {
 }
 
 .country-list {
-  list-style-type: decimal;
+  list-style-type: none;
   line-height: 3em;
 }
 
